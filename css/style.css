@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 90px;
-  background: url(/images/Rectangle\ 2580@2x.png) no-repeat;
+  background: url(../images/Rectangle\ 2580@2x.png) no-repeat;
   background-size: 100% 90px;
   position: fixed;
   z-index: 1200;
@@ -208,22 +208,22 @@ body {
 }
 
 .mv-content .content-left>.slick-dots li:nth-child(1) button {
-  background: url(/images/slide/thumb1.png) no-repeat;
+  background: url(../images/slide/thumb1.png) no-repeat;
   background-size: cover;
 }
 
 .mv-content .content-left>.slick-dots li:nth-child(2) button {
-  background: url(/images/slide/thumb2.png) no-repeat;
+  background: url(../images/slide/thumb2.png) no-repeat;
   background-size: cover;
 }
 
 .mv-content .content-left>.slick-dots li:nth-child(3) button {
-  background: url(/images/slide/thumb3.png) no-repeat;
+  background: url(../images/slide/thumb3.png) no-repeat;
   background-size: cover;
 }
 
 .mv-content .content-left>.slick-dots li:nth-child(4) button {
-  background: url(/images/slide/thumb4.png) no-repeat;
+  background: url(../images/slide/thumb4.png) no-repeat;
   background-size: cover;
   background-color: #FFFFFF;
 }
@@ -263,13 +263,13 @@ body {
   cursor: pointer;
 }
 .mv-content .mini-content .button::after {
-  content: url(/images/icons/arrow_r.svg);
+  content: url(../images/icons/arrow_r.svg);
   width: 40px;
   transition: all .5s ease-in-out;
   margin-left: 15px;
 }
 .mv-content .mini-content .button:hover::after{
-  content: url(/images/icons/arrow_rw.svg);
+  content: url(../images/icons/arrow_rw.svg);
   width: 70px;
 }
 .mv-content .mini-content .button:hover {
@@ -311,7 +311,7 @@ body {
 
 .product>.background {
   position: absolute;
-  background: url('/images/bg-product.png') no-repeat;
+  background: url('../images/bg-product.png') no-repeat;
   background-size: 100% 100%;
   width: 100%;
   height: 680px;
@@ -326,7 +326,7 @@ body {
 }
 
 .product .container>.background {
-  background: url(/images/bg.png) no-repeat;
+  background: url('../images/bg.png') no-repeat;
   background-size: cover;
   width: calc(100% - 30px);
   height: 80%;
@@ -401,7 +401,7 @@ body {
 }
 
 .solutions .background {
-  background: url(/images/Path\ 20916.png) no-repeat;
+  background: url(../images/Path\ 20916.png) no-repeat;
   background-size: 100% 830px;
   width: 100%;
   height: 830px;
@@ -469,13 +469,13 @@ body {
 }
 
 .solutions .content-left .btn-solution::after {
-  content: url(/images/icons/arrow_r.svg);
+  content: url(../images/icons/arrow_r.svg);
   width: 14px;
   transition: all 0.4s linear;
 }
 
 .solutions .content-left .btn-solution:hover::after {
-  content: url(/images/icons/arrow_rw.svg);
+  content: url(../images/icons/arrow_rw.svg);
   width: 27px;
 }
 
@@ -490,7 +490,7 @@ body {
 }
 
 .solutions .content-right .image {
-  background: url(/images/Group\ 893.png) no-repeat;
+  background: url(../images/Group\ 893.png) no-repeat;
   background-size: 100% 570px;
   width: 100%;
   height: 570px;
@@ -503,7 +503,7 @@ body {
   left: -10%;
   top: 50%;
   transform: translateY(-50%);
-  background: url(/images/en_トータルソリューション.png) no-repeat;
+  background: url(../images/en_トータルソリューション.png) no-repeat;
   width: 547px;
   height: 547px
 }
@@ -513,7 +513,7 @@ body {
 }
 
 .value-packaging .background {
-  background: url(/images/Path\ 20917@2x.png) no-repeat;
+  background: url(../images/Path\ 20917@2x.png) no-repeat;
   background-size: 100% 970px;
   width: 100%;
   height: 970px;
@@ -538,7 +538,7 @@ body {
 }
 
 .value-packaging .content-left .img {
-  background: url(/images/Group\ 3335@2x.png) no-repeat;
+  background: url(../images/Group\ 3335@2x.png) no-repeat;
   background-size: contain;
   width: 100%;
   height: 642px;
@@ -588,7 +588,7 @@ body {
 
 .value-packaging .content-right .button-toppan::after,
 .value-packaging .content-right .list-button .button::after {
-  content: url(/images/icons/arrow_r.svg);
+  content: url(../images/icons/arrow_r.svg);
   width: 14px;
   transition: all .4s linear;
 }
@@ -614,7 +614,7 @@ body {
 
 .value-packaging .content-right .button-toppan:hover::after,
 .value-packaging .content-right .button:hover::after {
-  content: url(/images/icons/arrow_rw.svg);
+  content: url(../images/icons/arrow_rw.svg);
 }
 
 .news-release {
@@ -646,7 +646,7 @@ body {
 }
 
 .redirec-release::after {
-  content: url(/images/icons/arrow_r.svg);
+  content: url(../images/icons/arrow_r.svg);
   transition: all 0.3 linear;
 }
 
@@ -656,7 +656,7 @@ body {
 }
 
 .redirec-release:hover::after {
-  content: url(/images/icons/arrow_rw.svg);
+  content: url(../images/icons/arrow_rw.svg);
 }
 
 .news-release .container>.title {
@@ -748,14 +748,14 @@ body {
 .locations .background .background-1 {
   position: absolute;
   z-index: -30;
-  background: url(/images/locaitons-bg/Mask\ Group\ 36@2x.png) no-repeat;
+  background: url(../images/locaitons-bg/Mask\ Group\ 36@2x.png) no-repeat;
   background-size: cover;
 }
 
 .locations .background .background-2 {
   position: absolute;
   z-index: -15;
-  background: url(/images/locaitons-bg/Mask\ Group\ 37@2x.png) no-repeat;
+  background: url(../images/locaitons-bg/Mask\ Group\ 37@2x.png) no-repeat;
   background-size: cover;
 }
 
@@ -763,7 +763,7 @@ body {
   opacity: 0.6;
   position: absolute;
   z-index: -20;
-  background: url(/images/locaitons-bg/Rectangle\ 449@2x.png) no-repeat;
+  background: url(../images/locaitons-bg/Rectangle\ 449@2x.png) no-repeat;
   background-size: cover;
 }
 
@@ -816,13 +816,13 @@ body {
 }
 
 .locations .content .button button::after {
-  content: url(/images/icons/arrow_r.svg);
+  content: url(../images/icons/arrow_r.svg);
   transition: all .4s linear;
   margin-left: 15px;
 }
 
 .locations .content .button button:hover::after {
-  content: url(/images//icons/arrow_rw.svg);
+  content: url(../images//icons/arrow_rw.svg);
 }
 
 .locations .content .button button:hover {
@@ -841,7 +841,7 @@ body {
 
 .co-creation .background {
   position: absolute;
-  background: url(/images/Path\ 20918@2x.png) no-repeat;
+  background: url(../images/Path\ 20918@2x.png) no-repeat;
   background-size: 100% 350px;
   width: 100%;
   height: 350px;
@@ -903,13 +903,13 @@ body {
 }
 
 .co-creation .content-right .button button::after {
-  content: url(/images/icons/icon_elink.svg);
+  content: url(../images/icons/icon_elink.svg);
   margin-left: 15px;
   transition: all .4s linear;
 }
 
 .co-creation .content-right .button button:hover::after {
-  content: url(/images/icons/icon_elinkw.svg);
+  content: url(../images/icons/icon_elinkw.svg);
 }
 
 .co-creation .content-right .button button:hover {
@@ -1059,7 +1059,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(/images/Rectangle\ 43@2x.png) no-repeat;
+  background: url(../images/Rectangle\ 43@2x.png) no-repeat;
   background-size: cover;
   z-index: 2000;
 
@@ -1200,7 +1200,7 @@ body {
   }
 
   .header .menu-list.active {
-    background: url(/images/background1.png) no-repeat;
+    background: url(../images/background1.png) no-repeat;
     background-size: cover;
     background-color: #F4F4F4;
     position: fixed;
@@ -1674,7 +1674,7 @@ body {
   }
 
   .co-creation .background {
-    background: url(/images/Path\ 20918sp.png) no-repeat;
+    background: url(../images/Path\ 20918sp.png) no-repeat;
     background-size: 100% 50rem;
     height: 50rem;
   }
