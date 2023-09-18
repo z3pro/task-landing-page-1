@@ -352,6 +352,7 @@ body {
   background-color: #0C4947;
   color: #FFFFFF;
   height: 74px;
+  cursor: pointer;
 }
 
 .product .menu-item.active {
