@@ -79,9 +79,12 @@ $(document).ready(function () {
       $('.btn-top').css('display', 'none')
     }
   };
-  const topFunction = ()=>{
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  const topFunction = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
   const clickProductType = () => {
     $('.product .product-menu').css("justify-content", "flex-start");
@@ -150,7 +153,6 @@ $(document).ready(function () {
           $(ele).removeClass('active');
         }
       });
-      console.log(index);
       if (index === 0 || index === 3) {
         clickProductType();
       } else if (index === 1 || index === 4) {
@@ -161,9 +163,25 @@ $(document).ready(function () {
     })
   })
   $('.modal-search .btn-close').click(() => {
+    clickProductType();
+    $('.product .menu-item').each((index, e) => {
+      if (index === 0) {
+        $(e).addClass('active');
+      } else {
+        $(e).removeClass('active');
+      }
+    });
     $('.modal-search').removeClass('active');
   })
   $('.header .menu-item.search').click(() => {
+    $('.modal-search .product .menu-item').each((index, e) => {
+      if (index === 0) {
+        $(e).addClass('active');
+      } else {
+        $(e).removeClass('active');
+      }
+    });
+    clickProductType();
     $('.modal-search').addClass('active');
     $('.header .header-right .menu-list').removeClass('active');
     $('.header .header-right .btn-location-sp').removeClass('hidden');
@@ -184,9 +202,39 @@ $(document).ready(function () {
     $('.header .header-right .btn-menu-sp').removeClass('hidden');
     $('.header .header-right .btn-close').removeClass('active');
   })
-
+  $('.mv-content .content-left>.slick-dots li').each((index,e) => {
+    $(e).click(() => {
+      if (index === 0) {
+        $('.mv-content .content-right .mini-content').html(
+          ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
+              <p class="description">Safe, secure manufacturing at plants<br> equipped with cutting-edge technology</p>`
+        )
+      }
+      else if (index === 1) {
+        $('.mv-content .content-right .mini-content').html(
+          ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
+              <p class="description">Market-leading transparent barrier film that<br> achieves both outstanding barrier performance<br>and eco-friendliness</p>
+              <button class = 'button'>GL BARRIER </button>
+              `
+        )
+      } else if (index === 2) {
+        $('.mv-content .content-right .mini-content').html(
+          ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
+              <p class="description">Supporting diverse solutions for our<br> customers’ products</p>
+              <button class = 'button'>Total Solutions </button>
+              `
+        )
+      } else if (index === 3) {
+        $('.mv-content .content-right .mini-content').html(
+          ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
+              <p class="description">Supporting diverse solutions for our customers’ products</p>
+              <button class = 'button'>Sustainability </button>
+              `
+        )
+      }
+    })
+  })
   $('.mv-content .content-left').on('beforeChange', (event, slick, currentSlide, nextSlide) => {
-    console.log(currentSlide);
     if (currentSlide === 3) {
       $('.mv-content .content-right .mini-content').html(
         ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
@@ -217,5 +265,5 @@ $(document).ready(function () {
     }
   })
 
-  
+
 });
