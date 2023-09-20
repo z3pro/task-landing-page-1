@@ -35,11 +35,11 @@ body {
 
 .arrow:before {
   content: '';
-  height: 2.5px;
+  height: 3px;
   width: 8px;
   background-color: #114E4C;
   display: block;
-  float: left;
+  /* float: left; */
   position: relative;
   transition: 0.2s ease-in-out;
 }
@@ -51,6 +51,7 @@ body {
   border-right: 5px solid transparent;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
+  transition: 0.2s ease-in-out;
 }
 
 .solutions .btn-solution:hover .arrow::before,
@@ -393,7 +394,7 @@ body {
   color: #0C4947;
   position: absolute;
   bottom: -20px;
-  width: 232px;
+  white-space: nowrap;
   left: 98%;
 }
 
@@ -598,7 +599,7 @@ body {
 
 .solutions .content .content-right {
   flex: 1;
-  padding-top: 70px ;
+  padding-top: 70px;
 }
 
 .solutions .content-right .image {
@@ -1218,9 +1219,12 @@ body {
   .header .logo-name {
     display: none;
   }
+
   .menu-list .menu-item {
     margin-right: 20px;
+    font-size: 12px;
   }
+
   .mv-content .content-left {
     position: relative;
     max-height: 510px;
@@ -1235,6 +1239,9 @@ body {
   .mv-content .content-right {
     padding-left: 40px;
   }
+    .mv-content .mini-content .title {
+      font-size: 32px;
+    }
 
   .mv-content .content-left .slick-list {
     max-width: 550px;
@@ -1293,12 +1300,14 @@ body {
     width: 23%;
     margin: 1%;
   }
-    .modal-search .container {
-      padding: 0 20px;
-    }
-        .modal-search .container .btn-close {
-          right: 20px;
-        }
+
+  .modal-search .container {
+    padding: 0 20px;
+  }
+
+  .modal-search .container .btn-close {
+    right: 20px;
+  }
 }
 
 
@@ -1431,6 +1440,24 @@ body {
     max-width: 36rem;
   }
 
+  .mv-content .content-left>.slick-dots {
+    bottom: -2rem;
+    left: 2rem;
+    width: 34rem;
+    height: 0.2rem;
+    background-color: #FFFFFF;
+    gap: 0;
+  }
+
+  .mv-content .content-left>.slick-dots li {
+    width: 25%;
+    height: 100%;
+  }
+
+  .mv-content .content-left>.slick-dots>.slick-active {
+    background-color: #000;
+  }
+
   .mv-content .content-left>.slick-dots button {
     display: none;
   }
@@ -1443,7 +1470,6 @@ body {
 
   .mv-content .mini-content {
     margin-top: 4rem;
-    max-width: 27.1rem;
     color: #FFFFFF;
     min-height: 25rem;
   }
@@ -1554,7 +1580,10 @@ body {
     justify-content: center;
     align-items: center;
   }
-
+.product .menu-item:nth-child(2)::after,
+.product .menu-item:nth-child(2)::before {
+  height: 2rem;
+}
   .product .product-content {
     padding: 2.5rem 0.6rem 0;
     gap: 0;
@@ -1633,11 +1662,11 @@ body {
     font-weight: 550;
     line-height: 1.9rem;
     gap: 1.5rem;
-    width: 14rem;
+    width: 15rem;
   }
 
   .solutions .content-left .btn-solution:hover {
-    width: 22rem;
+    width: 25rem;
   }
 
   .solutions .content .content-right {
