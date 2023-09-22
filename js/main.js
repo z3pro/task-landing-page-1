@@ -2,64 +2,89 @@
 $(document).ready(function () {
   const dataByProductType = [
     {
-      img: 'images/product-item/Mask Group 112.png',
+      img: 'images/product-item/product-type/Mask Group 113.png',
       title: 'Flexible Packaging'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/product-type/Mask Group 112.png',
+      title: 'Barrier Film'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/product-type/Mask Group 114.png',
+      title: 'Folding Cartons'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/product-type/Mask Group 115.png',
+      title: 'Composite Containers for Liquids'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/product-type/Mask Group 116.png',
+      title: 'Plastic Products'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/product-type/Mask Group 117.png',
+      title: 'Corrugated Board'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/product-type/Mask Group 118.png',
+      title: 'Performance Materials and Energy'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/product-type/Mask Group 120.png',
+      title: 'BPO/Filling'
+    },
+    {
+      img: 'images/product-item/product-type/Mask Group 119.png',
+      title: 'Digital transformation'
+    },
+    {
+      img: 'images/product-item/product-type/Mask Group 121.png',
+      title: 'Others'
     }
   ]
   const dataByIndustry = [
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/industry/Mask Group 124.png',
+      title: 'Medical and Pharmaceutical Goods'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/industry/Mask Group 125.png',
+      title: 'Foods & Confectionery'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/industry/Mask Group 126.png',
+      title: 'Toiletries'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
-    }
+      img: 'images/product-item/industry/Mask Group 122.png',
+      title: 'Beverages'
+    },
+    {
+      img: 'images/product-item/industry/Mask Group 123.png',
+      title: 'Industrial Materials'
+    },
+
   ]
   const dataByPurpose = [
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/purpose/Mask Group 129.png',
+      title: 'User-Friendly Design'
     },
     {
-      img: 'images/product-item/Mask Group 112.png',
-      title: 'Flexible Packaging'
+      img: 'images/product-item/purpose/Mask Group 130.png',
+      title: 'Providing Information & Designs'
+    },
+    {
+      img: 'images/product-item/purpose/Mask Group 131.png',
+      title: 'Enhancing ease of distribution'
+    },
+    {
+      img: 'images/product-item/purpose/Mask Group 128.png',
+      title: 'Earth-Friendly Materials'
+    },
+    {
+      img: 'images/product-item/purpose/Mask Group 127.png',
+      title: 'Digitalizing processes'
     },
   ]
   $('.mv-content .content-left').slick({
@@ -69,6 +94,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 3000,
     cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+    fade:true,
     arrows: false,
     dots: true
   });
@@ -86,8 +112,8 @@ $(document).ready(function () {
       behavior: 'smooth'
     });
   }
-  const clickProductType = () => {
-    $('.product .product-menu').css("justify-content", "flex-start");
+  const clickProductType = (eMenu,eContent) => {
+    $(eMenu).css("justify-content", "flex-start");
     const htmlContentProduct = dataByProductType.map((data, index) => {
       return `<div class="product-item">
               <div class="item">
@@ -100,10 +126,10 @@ $(document).ready(function () {
               </div>
             </div>`
     });
-    $('.product .product-content').html(htmlContentProduct.join(''));
+    $(eContent).html(htmlContentProduct.join(''));
   }
-  const clickIndustry = () => {
-    $('.product .product-menu').css("justify-content", "center");
+  const clickIndustry = (eMenu,eContent) => {
+    $(eMenu).css("justify-content", "center");
     const htmlContentProduct = dataByIndustry.map((data, index) => {
       return `<div class="product-item">
               <div class="item">
@@ -116,10 +142,10 @@ $(document).ready(function () {
               </div>
             </div>`
     });
-    $('.product .product-content').html(htmlContentProduct.join(''));
+    $(eContent).html(htmlContentProduct.join(''));
   }
-  const clickPurpose = () => {
-    $('.product .product-menu').css("justify-content", "flex-end");
+  const clickPurpose = (eMenu,eContent) => {
+    $(eMenu).css("justify-content", "flex-end");
     const htmlContentProduct = dataByPurpose.map((data, index) => {
       return `<div class="product-item">
               <div class="item">
@@ -132,11 +158,16 @@ $(document).ready(function () {
               </div>
             </div>`
     });
-    $('.product .product-content').html(htmlContentProduct.join(''));
+    $(eContent).html(htmlContentProduct.join(''));
   };
 
   function start() {
-    clickProductType();
+    const eContent = $('.product-section .product-content');
+    const eMenu = $('.product-section .product-menu');
+    const eContentSearch = $('.modal-search .product .product-content');
+    const eMenuSearch = $('.modal-search .product .product-menu');
+    clickProductType(eMenu, eContent);
+    clickProductType(eMenuSearch, eContentSearch);
   };
   start();
 
@@ -144,43 +175,51 @@ $(document).ready(function () {
   $('.btn-top').click(() => {
     topFunction();
   })
-  $('.product .product-menu').find('.menu-item').each((index, element) => {
+  $('.product-section .product-menu').find('.menu-item').each((index, element) => {
+    const eContent = $('.product-section .product-content');
+    const eMenu = $('.product-section .product-menu');
     $(element).click(() => {
-      $('.product .product-menu').find('.menu-item').each((key, ele) => {
+      $('.product-section .product-menu').find('.menu-item').each((key, ele) => {
         if (key === index) {
           $(ele).addClass('active');
         } else {
           $(ele).removeClass('active');
         }
       });
-      if (index === 0 || index === 3) {
-        clickProductType();
-      } else if (index === 1 || index === 4) {
-        clickIndustry();
-      } else if (index === 2 || index === 5) {
-        clickPurpose();
+      if (index === 0) {
+        clickProductType(eMenu,eContent);
+      } else if (index === 1) {
+        clickIndustry(eMenu,eContent);
+      } else if (index === 2) {
+        clickPurpose(eMenu,eContent);
+      }
+    })
+  })
+  $('.modal-search .product .product-menu').find('.menu-item').each((index, element) => {
+    const eContent = $('.modal-search .product .product-content');
+    const eMenu = $('.modal-search .product .product-menu');
+    $(element).click(() => {
+      $('.modal-search .product .product-menu').find('.menu-item').each((key, ele) => {
+        if (key === index) {
+          $(ele).addClass('active');
+        } else {
+          $(ele).removeClass('active');
+        }
+      });
+      if (index === 0) {
+        clickProductType(eMenu,eContent);
+      } else if (index === 1) {
+        clickIndustry(eMenu,eContent);
+      } else if (index === 2) {
+        clickPurpose(eMenu,eContent);
       }
     })
   })
   $('.modal-search .btn-close').click(() => {
     clickProductType();
-    $('.product .menu-item').each((index, e) => {
-      if (index === 0) {
-        $(e).addClass('active');
-      } else {
-        $(e).removeClass('active');
-      }
-    });
     $('.modal-search').removeClass('active');
   })
   $('.header .menu-item.search').click(() => {
-    $('.modal-search .product .menu-item').each((index, e) => {
-      if (index === 0) {
-        $(e).addClass('active');
-      } else {
-        $(e).removeClass('active');
-      }
-    });
     clickProductType();
     $('.modal-search').addClass('active');
     $('.header .header-right .menu-list').removeClass('active');
@@ -202,7 +241,7 @@ $(document).ready(function () {
     $('.header .header-right .btn-menu-sp').removeClass('hidden');
     $('.header .header-right .btn-close').removeClass('active');
   })
-  $('.mv-content .content-left>.slick-dots li').each((index,e) => {
+  $('.mv-content .content-left>.slick-dots li').each((index, e) => {
     $(e).click(() => {
       if (index === 0) {
         $('.mv-content .content-right .mini-content').html(
@@ -214,21 +253,24 @@ $(document).ready(function () {
         $('.mv-content .content-right .mini-content').html(
           ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
               <p class="description">Market-leading transparent barrier film that<br> achieves both outstanding barrier performance<br>and eco-friendliness</p>
-              <button class = 'button'>GL BARRIER </button>
+              <button class = 'button'>
+                GL BARRIER
+                <div class="arrow"></div>
+              </button>
               `
         )
       } else if (index === 2) {
         $('.mv-content .content-right .mini-content').html(
           ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
               <p class="description">Supporting diverse solutions for our<br> customers’ products</p>
-              <button class = 'button'>Total Solutions </button>
+              <button class = 'button'>Total Solutions  <div class="arrow"></div></button>
               `
         )
       } else if (index === 3) {
         $('.mv-content .content-right .mini-content').html(
           ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
               <p class="description">Supporting diverse solutions for our customers’ products</p>
-              <button class = 'button'>Sustainability </button>
+              <button class = 'button'>Sustainability  <div class="arrow"></div></button>
               `
         )
       }
@@ -245,21 +287,21 @@ $(document).ready(function () {
       $('.mv-content .content-right .mini-content').html(
         ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
               <p class="description">Market-leading transparent barrier film that<br> achieves both outstanding barrier performance<br>and eco-friendliness</p>
-              <button class = 'button'>GL BARRIER </button>
+              <button class = 'button'>GL BARRIER  <div class="arrow"></div></button>
               `
       )
     } else if (currentSlide === 1) {
       $('.mv-content .content-right .mini-content').html(
         ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
               <p class="description">Supporting diverse solutions for our<br> customers’ products</p>
-              <button class = 'button'>Total Solutions </button>
+              <button class = 'button'>Total Solutions  <div class="arrow"></div></button>
               `
       )
     } else if (currentSlide === 2) {
       $('.mv-content .content-right .mini-content').html(
         ` <h3 class="title">We design the fulfilling <br>lifestyle of the future<br> through our packages.</h3>
               <p class="description">Supporting diverse solutions for our customers’ products</p>
-              <button class = 'button'>Sustainability </button>
+              <button class = 'button'>Sustainability  <div class="arrow"></div></button>
               `
       )
     }

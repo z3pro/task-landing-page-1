@@ -23,19 +23,17 @@ body {
   left: 90%;
 }
 
+.mv-content .mini-content .arrow,
 .solutions .btn-solution .arrow,
 .locations .content .button .arrow,
 .redirec-release .arrow {
   left: 80%;
 }
 
-.solutions .btn-solution:hover .arrow {
-  left: 85%;
-}
 
 .arrow:before {
   content: '';
-  height: 3px;
+  height: 2.5px;
   width: 8px;
   background-color: #114E4C;
   display: block;
@@ -76,7 +74,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 90px;
-  background: url(../images/Rectangle\ 2580@2x.png) no-repeat;
+  background: url(../images/background_header.png) no-repeat;
   background-size: 100% 90px;
   position: fixed;
   z-index: 1200;
@@ -185,22 +183,13 @@ body {
 
 .mv-content {
   position: relative;
+  background: url("../images/background_mv-content.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 140px 0 260px;
 }
 
-.mv-content::after {
-  content: '';
-  background: url("../images/background1.png") no-repeat;
-  background-size: 100% 980px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 980px;
-  z-index: -1;
-}
 
 .mv-content .container {
-  padding-top: 140px;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -293,7 +282,7 @@ body {
 }
 
 .mv-content .content-left img {
-  width: 711px;
+  width: 100%;
   height: 583px;
   object-fit: contain;
 }
@@ -320,24 +309,14 @@ body {
 
 .mv-content .mini-content .button {
   margin-top: 20px;
-  padding: 15px 25px;
+  padding: 15px 50px 15px 25px;
   border: none;
   background-color: #FFFFFF;
   border-radius: 9999px;
   cursor: pointer;
+  position: relative;
 }
 
-.mv-content .mini-content .button::after {
-  content: url(../images/icons/arrow_r.svg);
-  width: 40px;
-  transition: all .5s ease-in-out;
-  margin-left: 15px;
-}
-
-.mv-content .mini-content .button:hover::after {
-  content: url(../images/icons/arrow_rw.svg);
-  width: 70px;
-}
 
 .mv-content .mini-content .button:hover {
   color: #FFFFFF;
@@ -354,40 +333,37 @@ body {
 
 .product {
   position: relative;
-  min-height: 930px;
-  margin-top: 110px;
-}
-
-.product::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
+  margin-top: 42px;
   background: url('../images/bg-product.png') no-repeat;
   background-size: 100% 100%;
-  width: 100%;
-  height: 678px;
-  z-index: -2;
+  padding-bottom: 230px;
 }
+
 
 .product .container {
   max-width: 1300px;
-  margin: 40px auto 0;
-  padding-right: 30px;
+  margin: 0 auto;
   position: relative;
   z-index: 100;
+  padding: 0 48px
 }
 
 .product .container>.title {
+  position: absolute;
+  left: 0;
+  top: -200px;
+}
+
+.product .container>.title span {
   padding: 25px 0;
   display: inline-block;
   font-size: 116px;
   line-height: 93px;
   color: #FFFFFF;
   position: relative;
-  margin-bottom: 50px;
 }
 
-.product .container>.title::after {
+.product .container>.title span::after {
   content: 'Our Products';
   font-size: 35px;
   line-height: 56px;
@@ -416,6 +392,30 @@ body {
   cursor: pointer;
 }
 
+.product-section .menu-item:nth-child(1),
+.modal-search .product .menu-item:nth-child(1) {
+  border-top-left-radius: 4px;
+}
+
+.product-section .menu-item:nth-child(3),
+.modal-search .product .menu-item:nth-child(3) {
+  border-top-right-radius: 4px;
+}
+
+.modal-search .menu-item:nth-child(1).active+.menu-item:nth-child(2),
+.product-section .menu-item:nth-child(1).active+.menu-item:nth-child(2) {
+  border-top-left-radius: 4px;
+}
+
+.product-section .menu-item:nth-child(3).active+.product-section .menu-item:nth-child(2) {
+  border-top-right-radius: 4px;
+}
+
+.product .menu-item:hover {
+  transition: all .4s ease-in-out;
+}
+
+.product .menu-item:hover,
 .product .menu-item.active {
   height: 82px;
   background-color: #FFFFFF;
@@ -425,6 +425,8 @@ body {
   border-top-right-radius: 4px;
 }
 
+.product .menu-item:hover::before,
+.product .menu-item:hover::after,
 .product .menu-item.active::before,
 .product .menu-item.active::after {
   display: none;
@@ -459,7 +461,7 @@ body {
   position: relative;
   min-height: 200px;
   background-color: #FFFFFF;
-  padding: 70px 30px;
+  padding: 70px 12px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -470,7 +472,7 @@ body {
 
 .product .product-content::after {
   content: '';
-  background: url('../images/bg.png') no-repeat;
+  background: url('../images/bg_product-content.png') no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -482,7 +484,7 @@ body {
 
 .product .product-item {
   width: 20%;
-  padding: 25px;
+  padding: 25px 8px;
 }
 
 .product .product-item .item {
@@ -501,14 +503,15 @@ body {
   font-size: 16px;
   font-weight: bold;
   line-height: 22px;
-  margin: auto;
+  margin: auto 0;
+  word-break: break-word;
 }
 
 .solutions {
-  min-height: 830px;
   position: relative;
-  background: url(../images/Path\ 20916.png) no-repeat;
-  background-size: 100% 830px;
+  background: url(../images/bg_solution.png) no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 200px;
 }
 
 .solutions .container {
@@ -518,6 +521,7 @@ body {
 
 .solutions .container .content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .solutions .content .content-left {
@@ -527,16 +531,8 @@ body {
 
 .solutions .content-left .title {
   font-size: 55px;
-  letter-spacing: 5px;
   font-weight: bold;
   line-height: 70px;
-}
-
-.solutions .content-left .title span {
-  display: block;
-  white-space: nowrap;
-  text-overflow: clip;
-  overflow: hidden;
 }
 
 .solutions .content-left .description {
@@ -560,30 +556,10 @@ body {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  width: 190px;
-  transition: width .3s ease-in-out;
+  width: auto;
   position: relative;
 }
 
-.solutions .content-left .btn-solution:hover {
-  width: 320px;
-}
-
-.solutions .content-left .btn-solution:hover span {
-  display: none;
-  width: 0;
-  height: 0;
-}
-
-.solutions .content-left .btn-solution::before {
-  content: 'Total solution hover test hover';
-  opacity: 0;
-  white-space: nowrap;
-  text-overflow: clip;
-  overflow: hidden;
-  display: none;
-  transition: all .4s ease-in-out;
-}
 
 .solutions .content-left .btn-solution:hover::before {
   opacity: 1;
@@ -602,40 +578,38 @@ body {
   padding-top: 70px;
 }
 
-.solutions .content-right .image {
-  background: url(../images/Group\ 893.png) no-repeat;
-  background-size: 100% 570px;
+.solutions .content-right .img {
+
   width: 100%;
-  height: 570px;
   position: relative;
 }
 
-.solutions .content-right .image::before {
-  content: '';
+.solutions .content-right img {
+  width: 100%;
+  object-fit: fill;
+}
+
+.solutions .content-right .img::before {
+  content: "";
   position: absolute;
   left: -10%;
   top: 50%;
   transform: translateY(-50%);
-  background: url(../images/en_トータルソリューション.png) no-repeat;
-  width: 547px;
-  height: 547px
+  background: url(/images/en_トータルソリューション.png) no-repeat;
+  background-size: contain;
+  width: 90%;
+  height: 100%;
+  z-index: 10;
 }
 
 .value-packaging {
   position: relative;
+  background: url(../images/bg-packaging.png) no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 280px;
 }
 
-.value-packaging::after {
-  content: '';
-  position: absolute;
-  background: url(../images/Path\ 20917@2x.png) no-repeat;
-  background-size: 100% 970px;
-  width: 100%;
-  height: 970px;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+
 
 .value-packaging .container {
   max-width: 1400px;
@@ -649,13 +623,14 @@ body {
 }
 
 .value-packaging .content .content-left {
+  flex: 1;
   padding-top: 70px;
 }
 
 .value-packaging .content-left .img {
-  background: url(../images/Group\ 3335@2x.png) no-repeat;
+  background: url(../images/img_packaging-left.png) no-repeat;
   background-size: contain;
-  width: 697px;
+  width: 100%;
   height: 642px;
 }
 
@@ -679,7 +654,7 @@ body {
 }
 
 .value-packaging .content-right .list-button {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 
@@ -693,7 +668,6 @@ body {
   line-height: 27px;
   border: 1px solid;
   display: block;
-  padding: 10px 25px;
   border-color: #114E4C;
   border-radius: 999px;
   width: 304px;
@@ -704,20 +678,8 @@ body {
 }
 
 .value-packaging .content-right .list-button .button {
-  padding: 10px 50px 10px 25px;
+  padding: 8px 50px 8px 25px;
 }
-
-/* 
-.value-packaging .content-right .list-button .button::after {
-  content: url(../images/icons/arrow_r.svg);
-  object-fit: cover;
-  width: 14px;
-  transition: all .4s ease-in-out;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 85%;
-} */
 
 .value-packaging .content-right .button-toppan:hover,
 .value-packaging .content-right .list-button .button:hover {
@@ -731,22 +693,12 @@ body {
   background-color: #FFFFFF;
   border: none;
   width: 342px;
+  padding: 13px 25px;
 }
 
-/* 
-.value-packaging .content-right .list-button .button:hover {
-  color: #FFFFFF;
-  background-color: #114E4C;
-} */
-
-/* .value-packaging .content-right .button-toppan:hover::after, */
-/* .value-packaging .content-right .button:hover::after {
-  content: url(../images/icons/arrow_rw.svg);
-  width: 20px;
-} */
-
 .news-release {
-  margin-top: 80px;
+  position: relative;
+  margin-top: -160px;
 }
 
 .news-release .container {
@@ -855,20 +807,18 @@ body {
 
 
 .locations .container {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
   height: 100%;
-  min-height: 525px;
-  position: relative;
+  padding: 120px 0;
 }
 
 .locations .content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  display: inline-block;
+  width: auto;
 }
 
-.locations .content .title {
+.locations .container .title {
   font-size: 55px;
   font-weight: bold;
   line-height: 70px;
@@ -876,7 +826,7 @@ body {
   color: #FFFFFF;
 }
 
-.locations .content .description {
+.locations .container .description {
   margin-top: 40px;
   font-size: 16px;
   line-height: 27px;
@@ -884,14 +834,13 @@ body {
   color: #FFFFFF;
 }
 
-.locations .content .button {
-  max-width: 510px;
+.locations .container .button {
   display: flex;
   justify-content: flex-end;
   margin-top: 40px;
 }
 
-.locations .content .button button {
+.locations .container .button button {
   padding: 12px 50px 12px 25px;
   font-size: 16px;
   line-height: 27px;
@@ -905,40 +854,40 @@ body {
 
 
 
-.locations .content .button button:hover {
+.locations .container .button button:hover {
   background-color: #114E4C;
   color: #FFFFFF;
 }
 
-.locations .content .button button img {
+.locations .container .button button img {
   margin-left: 10px;
 }
 
 
 .co-creation {
   position: relative;
-  background: url(../images/Path\ 20918@2x.png) no-repeat;
-  background-size: 100% 350px;
+  background: url(../images/bg_co-creation.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 75px 0 40px;
 }
 
 
 .co-creation .container {
   max-width: 1150px;
   margin: 0 auto;
-  min-height: 350px;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  gap: 50px;
 }
 
 
 .co-creation .container .content-left {
+  flex: 1;
   display: inline-block;
 }
 
 .co-creation .container .content-right {
-  margin-left: 80px;
   display: inline-block;
 }
 
@@ -990,7 +939,6 @@ body {
 .contact {
   cursor: pointer;
   background-color: #02B9A4;
-  min-height: 200px;
   margin-top: 70px;
 }
 
@@ -1002,10 +950,10 @@ body {
   max-width: 680px;
   margin: 0 auto;
   display: flex;
-  min-height: 200px;
   justify-content: center;
   align-items: center;
   gap: 70px;
+  padding: 70px 0;
 }
 
 .contact .container .description {
@@ -1125,10 +1073,10 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(../images/Rectangle\ 43@2x.png) no-repeat;
+  background: url(../images/bg_modal-search.png) no-repeat;
   background-size: cover;
   z-index: 2000;
-
+  overflow: auto;
   display: none;
 }
 
@@ -1199,6 +1147,7 @@ body {
 
 .modal-search .product {
   margin-top: 40px;
+  background: none;
 }
 
 .modal-search .product .product-content::after,
@@ -1239,9 +1188,10 @@ body {
   .mv-content .content-right {
     padding-left: 40px;
   }
-    .mv-content .mini-content .title {
-      font-size: 32px;
-    }
+
+  .mv-content .mini-content .title {
+    font-size: 32px;
+  }
 
   .mv-content .content-left .slick-list {
     max-width: 550px;
@@ -1262,7 +1212,7 @@ body {
   }
 
   .product .product-item {
-    width: 25%;
+    width: 33.33%;
   }
 
   .value-packaging .content-left .img {
@@ -1307,7 +1257,12 @@ body {
 
   .modal-search .container .btn-close {
     right: 20px;
+    width: 35px;
   }
+    .modal-search .container .btn-close img {
+      width: 100%;
+      object-fit: cover;
+    }
 }
 
 
@@ -1322,6 +1277,7 @@ body {
 
   .header {
     height: 5rem;
+    background-color: #00B7A4;
   }
 
   .header .logo {
@@ -1339,15 +1295,15 @@ body {
   }
 
   .header .menu-list.active {
-    background: url(../images/background1.png) no-repeat;
-    background-size: cover;
+    background: url(../images/bg_menu-search-sp.png) no-repeat;
+    background-size: 100% 100%;
     background-color: #F4F4F4;
     position: fixed;
     top: 5rem;
     left: 0;
     width: 100vw;
-    height: 100vh;
-    z-index: 2000;
+    height: calc(100vh - 5rem);
+    z-index: 1000;
     display: block;
   }
 
@@ -1356,7 +1312,7 @@ body {
     max-width: 29.5rem;
     margin: 0 auto;
     margin-top: 5rem;
-    height: 35rem;
+    height: auto;
   }
 
   .header .menu-list ul li:first-child {
@@ -1386,6 +1342,7 @@ body {
     line-height: 2.7rem;
     padding: 1rem 5rem;
     border-radius: 999rem;
+    margin-top: 10rem;
   }
 
   .header .menu-list .contact-sp-header img {
@@ -1412,10 +1369,10 @@ body {
     display: block;
   }
 
-  .mv-content::after {
-    background: url(../images/bg_mv-sp.png) no-repeat;
-    background-size: 100% 71rem;
-    height: 71rem;
+  .mv-content {
+    background: url(/images/bg_mv-sp.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 0 0 70px;
   }
 
   .mv-content .background-header {
@@ -1513,22 +1470,26 @@ body {
   }
 
   .product {
-    margin-top: 0;
-    min-height: 78rem;
+    position: relative;
+    margin-top: 4rem;
+    background: url('../images/product_bg-sp.png') no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 15.5rem;
   }
 
-  .product::after {
-    background-image: url(../images/product_bg-sp.png);
-    height: 70rem;
-  }
+
 
   .product .container {
     max-width: 35.5rem;
-    margin: 0 auto;
-    padding-right: 1.5rem;
+    margin: 9rem auto 0;
+    padding: 0 1.5rem 0 0;
   }
 
   .product .container>.title {
+    top: -15rem;
+  }
+
+  .product .container>.title span {
     padding: 0;
     margin-top: 0;
     bottom: 0;
@@ -1542,7 +1503,7 @@ body {
     margin-bottom: 1rem;
   }
 
-  .product .container>.title::after {
+  .product .container>.title span::after {
     font-size: 2.5rem;
     line-height: 4rem;
     letter-spacing: 0.075rem;
@@ -1569,8 +1530,8 @@ body {
     cursor: pointer;
   }
 
+  .product .menu-item:hover,
   .product .menu-item.active {
-    padding: 1rem;
     height: 6rem;
     font-size: 1.6rem;
     line-height: 1.7rem;
@@ -1580,10 +1541,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-.product .menu-item:nth-child(2)::after,
-.product .menu-item:nth-child(2)::before {
-  height: 2rem;
-}
+
+  .product .menu-item:nth-child(2)::after,
+  .product .menu-item:nth-child(2)::before {
+    height: 2rem;
+  }
+
   .product .product-content {
     padding: 2.5rem 0.6rem 0;
     gap: 0;
@@ -1616,22 +1579,37 @@ body {
   .product .item .title {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    max-width: 7rem;
     text-align: center;
   }
 
   .solutions {
     margin-top: 3.3rem;
-    min-height: 83rem;
     background-image: url(../images/solution_bg-sp.png);
+    padding-bottom: 10rem;
   }
 
   .solutions .container {
     max-width: 37.5rem;
   }
 
+  .solutions .content-right .img {
+    width: 85%;
+    object-fit: fill;
+  }
+
   .solutions .container .content {
     flex-direction: column-reverse;
+  }
+
+  .solutions .content-right .img::before {
+    content: "";
+    position: absolute;
+    left: -15%;
+    top: 80%;
+    background: url(/images/en_トータルソリューション.png) no-repeat;
+    background-size: contain;
+    width: 90%;
+    height: 100%;
   }
 
   .solutions .content .content-left {
@@ -1640,20 +1618,24 @@ body {
   }
 
   .solutions .content-left .title {
-    max-width: 27.7rem;
     font-size: 3.5rem;
-    letter-spacing: 0.5rem;
     font-weight: bold;
     line-height: 4.5rem;
   }
 
   .solutions .content-left .description {
-    max-width: 30.8rem;
     margin-top: 2rem;
     font-size: 1.6rem;
     line-height: 2.7rem;
+    padding-right: 5.5rem;
   }
 
+  .solutions .content-left .description span {
+    display: none;
+  }
+  .solutions .content-left .description::before {
+    content: 'We provide optimal solutions matched to various settings related to our customers’ products,including product planning,development,and promotion.';
+  }
   .solutions .content-left .btn-solution {
     padding: 1.6rem 2rem;
     margin-top: 3rem;
@@ -1689,12 +1671,11 @@ body {
   }
 
   .value-packaging {
-    height: 97rem;
+    background: url(../images/packaging_bg-sp.png) no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 11rem;
   }
 
-  .value-packaging::after {
-    background-image: url(../images/packaging_bg-sp.png);
-  }
 
   .value-packaging .background {
     height: 77.7rem;
@@ -1721,22 +1702,29 @@ body {
   }
 
   .value-packaging .content-right {
-    position: absolute;
-    top: 30%;
+    margin-top: -8rem;
     margin-left: 2rem;
   }
 
   .value-packaging .content-right .title {
     font-size: 3.5rem;
     line-height: 4.5rem;
-    max-width: 18.7rem;
     margin-bottom: 3rem;
   }
 
   .value-packaging .content-right .description {
     font-size: 1.6rem;
     line-height: 2.7rem;
-    max-width: 28rem;
+    margin-top: 3rem;
+    padding-right: 3rem;
+  }
+
+  .value-packaging .content-right .description span {
+    display: none;
+  }
+
+  .value-packaging .content-right .description::before {
+    content: 'To help achieve a sustainable society,we are creating value that considers the future of people,society,and the planet.';
   }
 
   .value-packaging .content-right .list-button {
@@ -1845,15 +1833,13 @@ body {
 
 
   .locations {
-    height: 48.5rem;
     margin-top: 7rem;
     background-image: url(../images/locations_bg-sp.png);
   }
 
 
   .locations .container {
-    max-width: 37.5rem;
-    padding: 0 2.5rem;
+    padding: 7.5rem 2.5rem;
   }
 
   .locations .content .title {
@@ -1865,7 +1851,6 @@ body {
     margin-top: 5rem;
     font-size: 1.6rem;
     line-height: 2.7rem;
-    max-width: 32.5rem;
   }
 
   .locations .content .button {
@@ -1874,15 +1859,16 @@ body {
 
   .co-creation {
     background-image: url(../images/co-creation_bg-sp.png);
-    min-height: 50rem;
-    background-size: 100% 50rem;
+    background-size: 100% 100%;
+    padding: 0;
   }
 
   .co-creation .container {
     max-width: 37.5rem;
-    margin: 7.6rem auto 0;
+    margin: 8rem auto 0;
     padding: 6rem 2.5rem 0;
     position: relative;
+    gap: 0;
   }
 
   .co-creation .container .content-left {
@@ -1908,10 +1894,22 @@ body {
   }
 
   .co-creation .content-right .description {
-    max-width: 32.5rem;
     font-size: 1.6rem;
     line-height: 2.7rem;
     margin: 3rem 0 2rem;
+  }
+
+  .co-creation .content-right .description span {
+    display: none;
+  }
+
+  .co-creation .content-right .description::before {
+    content: 'This is a co-creation space showcasing Toppan’s packaging,décor materials,and wide-ranging other solutions.';
+    display: block;
+  }
+
+  .co-creation .content-right .description::after {
+    content: 'We shape and create the future of “life” together with customers based on ideas beginning with “if.”';
   }
 
   .co-creation .content-right .button button {
@@ -1936,7 +1934,14 @@ body {
   .contact .container .description {
     font-size: 1.6rem;
     line-height: 2.7rem;
-    max-width: 32.5rem;
+  }
+
+  .contact .container .description span {
+    display: none;
+  }
+
+  .contact .container .description::before {
+    content: 'Toppan provides a wide range of solutions for packaging. Let us know what you need.';
   }
 
   .contact .container .button {
@@ -2043,14 +2048,14 @@ body {
     width: 17rem;
   }
 
-  .modal-search .container .btn-close img {
+  .modal-search .container .btn-close  {
     width: 2rem;
     height: 2rem;
   }
 
   .btn-top {
-    right: 5rem;
-    bottom: 10rem;
+    right: 3rem;
+    bottom: 5rem;
   }
 
   .btn-top img {
